@@ -3,3 +3,8 @@ export enum ActionType {
     SEARCH_REPOS_SUCCESS = 'search_repos_success',
     SEARCH_REPOS_ERROR = 'search_repos_error'
 }
+
+export enum RepoMangerType {
+    NPM = 'npm',
+    CARGO = 'cargo'
+}

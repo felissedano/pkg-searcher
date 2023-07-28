@@ -27,4 +27,4 @@ const ReposList: React.FC = () => {
     </div>
 }
 
-export default ReposList
+export default ReposList;
