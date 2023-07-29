@@ -7,7 +7,6 @@ const App = () => {
     return <Provider store={store}>
         <div>
             <SearchBox />
-            <h1>Search for a Rust package</h1>
             <ReposList />
         </div>
 

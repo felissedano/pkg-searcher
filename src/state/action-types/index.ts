@@ -8,3 +8,8 @@ export enum RepoMangerType {
     NPM = 'npm',
     CARGO = 'cargo'
 }
+
+export enum RepoManagerURLType {
+    NPM_URL = 'http://registry.npmjs.org/-/v1/search',
+    CARGO_URL = 'https://crates.io/api/v1/crates'
+}
