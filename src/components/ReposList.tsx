@@ -1,7 +1,7 @@
 // import { useState } from "react"
 import { useTypedSelector } from "../hooks/useTypedSelector";
 // import { useActions } from "../hooks/useActions";
-import './index.css';
+import './App.css';
 import './ReposList.css';
 
 const ReposList: React.FC = () => {
@@ -15,7 +15,7 @@ const ReposList: React.FC = () => {
     //     searchRepos(term);
     // }
 
-    return <div id="reposlist-main">
+    return <div className="container__repolist" id="reposlist-main">
         {/* <form onSubmit={submitRepoToSearch}>
             <input type="text" onChange={(e) => changeTerm(e.target.value)} />
             <button>Search</button>
@@ -23,7 +23,7 @@ const ReposList: React.FC = () => {
         {repoSate.err && <h3> {repoSate.err} </h3>}
         {repoSate.loading && <h3>Loading NPM Packages...</h3>}
         {!repoSate.err && !repoSate.loading 
-        && repoSate.data.map((repo) => <p>{repo}</p>) }
+        && repoSate.data.map((repo) => <p className="repoitem">{repo}</p>) }
 
     </div>
 }
