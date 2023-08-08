@@ -24,7 +24,7 @@ const SearchBox: React.FC = () => {
         <div className="container__form">
             <form className="form__search" id="keyword-form" onSubmit={submitRepoToSearch}>
                 <select name="repo-manager" className="select__search" id="repo-manager-select" 
-                onChange={(e) => {changeRepoManger(e.target.value); console.log(e.target.value + " and " + repoManager)}}
+                onChange={(e) => {changeRepoManger(e.target.value); console.log("new value is " + e.target.value + " and old one is " + repoManager)}}
                 // value={repoManager} 
                 // onChange={(e) => {changeRepoManger(RepoMangerType[e.target.value as keyof typeof RepoMangerType]); console.log(e.target.value + " " + repoManager)}}
                 // onChange={(e) => {
@@ -43,7 +43,7 @@ const SearchBox: React.FC = () => {
                 <button className="button__search" id="search-button" onClick={(e) => ChangeTerm(termRef.current)}>
                     Search
                 </button>
-                
+
             </form>
 
         </div>
