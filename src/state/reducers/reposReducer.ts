@@ -1,30 +1,43 @@
-import { Action } from '../actions';
+import { Action, ReposData } from '../actions';
 import { ActionType } from '../action-types';
 
-interface repoState {
+
+
+interface RepoState {
     loading: boolean,
     err: string | null,
-    data: [string]
+    data?: ReposData[]
 }
 
-const initialState: repoState = {
+// const defaultReposData: ReposData {
+//     repoName
+// }
+
+const initialState: RepoState = {
     loading: false,
     err: null,
-    data: [""]
+    data: undefined
+    // data: [{
+    //     repoName: "",
+    //     authorName: "",
+    //     version: "",
+    //     githubLink: "",
+    // }]
 };
 
 
 export const reducer = (
-    state: repoState = initialState,
+    state: RepoState = initialState,
     action: Action
-): repoState => {
+): RepoState => {
     switch (action.type) {
         case ActionType.SEARCH_REPOS:
-            return { loading: true, err: null, data: [""] };
+            return { loading: true, err: null, data: undefined };
         case ActionType.SEARCH_REPOS_SUCCESS:
+            console.log(action.payload);
             return { loading: false, err: null, data: action.payload };
         case ActionType.SEARCH_REPOS_ERROR:
-            return { loading: false, err: action.payload, data: [""] };
+            return { loading: false, err: action.payload, data: undefined };
         default:
             return state;
     }
