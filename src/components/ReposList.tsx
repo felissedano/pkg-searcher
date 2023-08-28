@@ -1,6 +1,7 @@
 // import { useState } from "react"
 import { useTypedSelector } from "../hooks/useTypedSelector";
 // import { useActions } from "../hooks/useActions";
+import RepoWidget from "./RepoWidget";
 import './App.css';
 import './ReposList.css';
 
@@ -21,9 +22,9 @@ const ReposList: React.FC = () => {
             <button>Search</button>
         </form> */}
         {repoSate.err && <h3> {repoSate.err} </h3>}
-        {repoSate.loading && <h3>Loading NPM Packages...</h3>}
-        {!repoSate.err && !repoSate.loading 
-        && repoSate.data.map((repo) => <p className="repoitem">{repo}</p>) }
+        {repoSate.loading && <h3 className="h3__loading-screen">Loading Packages...</h3>}
+        {!repoSate.err && !repoSate.loading && repoSate.data
+        && repoSate.data.map((repo) => <RepoWidget {...repo} />) }
 
     </div>
 }

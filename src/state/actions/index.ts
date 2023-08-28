@@ -6,7 +6,7 @@ interface SearchReposAction {
 
 interface SearchReposSuccessAction {
     type: ActionType.SEARCH_REPOS_SUCCESS,
-    payload: [string]
+    payload: ReposData[]
 }
 
 interface SearchReposErrorAction {
@@ -18,3 +18,13 @@ export type Action =
 | SearchReposAction 
 | SearchReposSuccessAction 
 | SearchReposErrorAction
+
+export interface ReposData {
+    repoName: string,
+    authorName: string,
+    version: string,
+    githubLink: string,
+    githubAvatarLink?: string,
+    githubStarredCount?: string
+
+}
