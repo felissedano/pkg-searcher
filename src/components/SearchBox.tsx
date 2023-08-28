@@ -20,7 +20,7 @@ const SearchBox: React.FC = () => {
     }
 
     return <div className="container__main" id="searchbox">
-        <h1 className="h1__title" id="title"> Search From Your Package Manger of Choice!</h1>
+        <h1 className="h1__title" id="title"> Search From The Package Manger of Your Choice!</h1>
         <div className="container__form">
             <form className="form__search" id="keyword-form" onSubmit={submitRepoToSearch}>
                 <select name="repo-manager" className="select__search" id="repo-manager-select" 
