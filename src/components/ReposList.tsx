@@ -22,8 +22,7 @@ const ReposList: React.FC = () => {
             <button>Search</button>
         </form> */}
         {repoSate.err && <h3> {repoSate.err} </h3>}
-        {repoSate.loading && <h3>Loading NPM Packages...</h3>}
-        {!repoSate.err && !repoSate.loading && repoSate.data && <p>hi {repoSate.data.length}</p>}
+        {repoSate.loading && <h3 className="h3__loading-screen">Loading Packages...</h3>}
         {!repoSate.err && !repoSate.loading && repoSate.data
         && repoSate.data.map((repo) => <RepoWidget {...repo} />) }
 
