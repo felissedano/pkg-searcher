@@ -2,12 +2,21 @@
     margin-top: 0;
     border-top: 0;
     background-color: aliceblue;
-    /* background: linear-gradient(to bottom, aqua, lightgreen); */
     padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .repoitem {
     align-items: center;
     align-content: center;
     text-align: center;
+}
+
+.h3__loading-screen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
